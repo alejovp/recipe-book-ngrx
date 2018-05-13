@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-// import { HttpEvent, HttpEventType } from '@angular/common/http';
-
-import { DataStorageService } from '../../shared/data-storage.service';
 import { AuthService } from '../../auth/auth.service';
+// import { HttpEvent, HttpEventType } from '@angular/common/http';
+import { DataStorageService } from '../../shared/data-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +22,7 @@ export class HeaderComponent {
   }
 
   onFetchData() {
-    this.dataStorageService.getRecipes();
+    this.dataStorageService.getStoredRecipes();
   }
 
   onLogout() {
